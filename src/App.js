@@ -88,7 +88,7 @@ class App extends Component {
   onButtonSubmit = () => {
     console.log('click');
     this.setState({imageURL : this.state.input});
-    fetch("http://localhost:3000/imageurl", {
+    fetch("https://mybackend-g1no.onrender.com/imageurl", {
       method: 'post',
       headers: {
         'Content-Type' : 'application/json'
@@ -101,7 +101,7 @@ class App extends Component {
         .then(result => {
           //console.log(result)
           if(result){
-            fetch('http://localhost:3000/image', {
+            fetch('https://mybackend-g1no.onrender.com/image', {
                 method: 'put',
                 headers: {
                   'Content-Type' : 'application/json'
