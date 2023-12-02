@@ -26,7 +26,8 @@ class Register extends Component{
         fetch("https://mybackend-g1no.onrender.com/register", {
             method: 'post',
             headers: {
-                'Content-Type' : 'application/json'
+                'Content-Type' : 'application/json',
+                'Access-Control-Allow-Origin': 'http://localhost:8000'
             },
             body: JSON.stringify({
                 name: this.state.name,
